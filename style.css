@@ -1,0 +1,208 @@
+/* -------------------------------------- */
+/* 1. التنسيقات العامة والخطوط */
+/* -------------------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    direction: rtl; 
+    text-align: right;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px; 
+    margin: 0 auto;
+    background-color: #ffffff;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    padding-bottom: 20px;
+}
+
+/* -------------------------------------- */
+/* 2. رأس الصفحة (Header) */
+/* -------------------------------------- */
+.app-header {
+    background-color: #007bff; 
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    margin-top: 10px;
+}
+
+/* -------------------------------------- */
+/* 3. تنسيقات صفحة INDEX.HTML */
+/* -------------------------------------- */
+.status-section {
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.status-section h2 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.status-indicator {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.status-indicator.safe {
+    background-color: #28a745; /* أخضر للأمان */
+    color: white;
+}
+
+.status-indicator i {
+    margin-left: 10px;
+}
+
+.expiry-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* زر الإجراء */
+.action-section {
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.details-button {
+    background-color: #ffc107; 
+    color: #333;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 90%;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #e0a800;
+}
+
+/* -------------------------------------- */
+/* 4. تنسيقات صفحة DETAILS.HTML */
+/* -------------------------------------- */
+.details-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.tabs-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding: 15px 10px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #495057;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.tab-button.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    background-color: #fff;
+}
+
+.tab-content {
+    padding: 20px 15px;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* تنسيق خاص بجدول التغذية */
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.nutrition-table th, .nutrition-table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: right;
+}
+
+.nutrition-table th {
+    background-color: #f8f9fa;
+}
+
+/* تنسيق قسم الوصفة/الفيديو الوهمي */
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio لشاشة الفيديو */
+    background-color: #000;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-placeholder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: #fff;
+    opacity: 0.9;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}

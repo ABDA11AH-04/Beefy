@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل برجر اللحم</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="details-header">
+            تفاصيل برجر اللحم
+        </div>
+
+        <div class="tabs-nav">
+            <button class="tab-button active" data-tab="ingredients">المكونات</button>
+            <button class="tab-button" data-tab="nutrition">التغذية</button>
+            <button class="tab-button" data-tab="recipe">الوصفة</button>
+        </div>
+
+        <div id="ingredients" class="tab-content active">
+            <h3>المكونات الأساسية</h3>
+            <ul>
+                <li>**لحم بقري صافي** (لا يقل عن 80% لحم بقري مفروم قليل الدهن).</li>
+                <li>بصل مفروم ناعم (طازج).</li>
+                <li>توابل البرجر المميزة (ملح البحر، فلفل أسود، ثوم مجفف).</li>
+                <li>**قرشلة ناعمة** (للمساعدة في التماسك وتقليل الانكماش).</li>
+            </ul>
+            <p class="expiry-date" style="color: #d9534f; margin-top: 20px;">
+                **تنبيه الحساسية:** المنتج خالي من الغلوتين ولكن قد يحتوي على آثار من الخردل.
+            </p>
+        </div>
+
+        <div id="nutrition" class="tab-content">
+            <h3>الحقائق الغذائية (لكل 100 جرام من القرص)</h3>
+            <table class="nutrition-table">
+                <thead>
+                    <tr>
+                        <th>المحتوى</th>
+                        <th>القيمة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>السعرات الحرارية</td>
+                        <td>**250 سعرة حرارية**</td>
+                    </tr>
+                    <tr>
+                        <td>البروتين</td>
+                        <td>**24 جرام**</td>
+                    </tr>
+                    <tr>
+                        <td>الدهون الكلية</td>
+                        <td>18 جرام</td>
+                    </tr>
+                    <tr>
+                        <td>الكربوهيدرات</td>
+                        <td>1 جرام</td>
+                    </tr>
+                    <tr>
+                        <td>الصوديوم</td>
+                        <td>280 ملجم</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="recipe" class="tab-content">
+            <h3>تعليمات الطبخ الموصى بها</h3>
+            <ol>
+                <li>**التذويب:** اترك القرص يذوب تمامًا في الثلاجة قبل الطهي (لمدة 4 ساعات على الأقل).</li>
+                <li>**الشواء (Grill):** سخن الشواية لدرجة حرارة متوسطة. اشوِ البرجر لمدة **4-5 دقائق على كل جانب**.</li>
+                <li>**المقلاة:** سخن مقلاة غير لاصقة على نار متوسطة/عالية. ضع البرجر مباشرة واقلبه مرتين، ليصبح إجمالي وقت الطهي **8-10 دقائق**.</li>
+                <li>**التحقق:** تأكد من أن درجة الحرارة الداخلية للبرجر تصل إلى **71° مئوية** لضمان النضج الآمن.</li>
+            </ol>
+            
+            <h3 style="margin-top: 25px;">شاهد وصفة مقترحة (فيديو)</h3>
+            
+            <div class="video-placeholder">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="صورة شريحة برجر جاهزة">
+                <i class="fas fa-play play-icon"></i>
+            </div>
+            <p style="text-align: center; color: #888; font-size: 0.8rem;">
+                انقر لمشاهدة طريقة تشكيل وشواء البرجر.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
