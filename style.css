@@ -50,7 +50,6 @@ html[dir="rtl"] .language-toggle {
     color: white;
     padding: 20px;
     text-align: center;
-    /* إزالة الـ border-radius هنا لأنه سيتم تطبيقه على الـ container */
     margin-bottom: 0; 
     font-size: 1.8em;
     font-weight: 600; /* خط سميك قليلاً */
@@ -103,7 +102,7 @@ html[dir="rtl"] .language-toggle {
 .product-image-header {
     width: 100%;
     height: 200px; /* ارتفاع ثابت */
-    background: url('https://i.ibb.co/L8m2FjQ/hotdog-header.jpg') center center no-repeat; /* صورة جديدة */
+    background: url('https://i.ibb.co/L8m2FjQ/hotdog-header.jpg') center center no-repeat; /* صورة الهوت دوج الافتراضية */
     background-size: cover;
     display: flex;
     align-items: flex-end; /* وضع العنوان في الأسفل */
@@ -118,7 +117,7 @@ html[dir="rtl"] .language-toggle {
     width: 100%;
     font-size: 1.6em;
     font-weight: 600;
-    border-radius: 0; /* لا زوايا مستديرة هنا */
+    border-radius: 0;
 }
 
 /* --- Tabs Navigation --- */
@@ -143,7 +142,7 @@ html[dir="rtl"] .language-toggle {
 }
 
 .tab-button.active {
-    color: #e44d26; /* لون مميز للـ Tabs */
+    color: #e44d26; /* لون مميز للـ Tabs (برتقالي/أحمر) */
     border-bottom: 4px solid #e44d26;
     background-color: #fff;
 }
@@ -173,6 +172,8 @@ html[dir="rtl"] .language-toggle {
     font-size: 1.3em;
 }
 
+/* --- قوائم المكونات وطريقة الطبخ (مع تحسين الأرقام والنقاط) --- */
+
 .tab-content ul, .tab-content ol {
     padding: 0;
     list-style-type: none; /* إزالة النقاط/الأرقام الافتراضية */
@@ -181,11 +182,13 @@ html[dir="rtl"] .language-toggle {
 .tab-content li {
     margin-bottom: 12px;
     line-height: 1.6;
-    padding-left: 20px; /* مسافة للنقطة المخصصة (لغات RTL و LTR) */
+    padding-left: 20px; 
     position: relative;
     font-size: 0.95em;
+    color: #444; 
 }
 
+/* نقاط / أيقونات القوائم النقطية (إذا تم استخدامها) */
 .tab-content ul li::before {
     content: "\f058"; /* أيقونة علامة صح (Font Awesome) */
     font-family: "Font Awesome 6 Free";
@@ -196,17 +199,23 @@ html[dir="rtl"] .language-toggle {
     top: 0;
 }
 
-html[dir="rtl"] .tab-content ul li::before {
-    left: auto;
-    right: 0;
+/* أرقام / أيقونات القوائم المرتبة (طريقة الطبخ) */
+.tab-content ol li {
+    counter-increment: step-counter; /* لإضافة الأرقام بترتيب */
+    padding-left: 30px;
 }
 
-html[dir="rtl"] .tab-content li {
-    padding-left: 0;
-    padding-right: 20px;
+.tab-content ol li::before {
+    content: counter(step-counter) ".";
+    font-weight: bold;
+    color: #007bff; /* لون الأزرق للأرقام */
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-/* Nutrition Table Styling (تحسين الألوان والخطوط) */
+
+/* --- Nutrition Table Styling (تحسين الألوان والخطوط) --- */
 .nutrition-table {
     width: 100%;
     border-collapse: collapse;
@@ -235,7 +244,7 @@ html[dir="rtl"] .tab-content li {
     color: #007bff;
 }
 
-/* Video Container */
+/* --- Video Container --- */
 .video-container {
     margin-top: 25px;
     border-radius: 8px;
@@ -243,7 +252,33 @@ html[dir="rtl"] .tab-content li {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* RTL adjustment for table text alignment */
+/* ------------------ RTL Adjustments (التعديلات الخاصة باللغة العربية) ------------------ */
+
 html[dir="rtl"] .nutrition-table th, html[dir="rtl"] .nutrition-table td {
     text-align: right;
+}
+
+html[dir="rtl"] .language-toggle {
+    left: 20px;
+    right: auto;
+}
+
+/* تعديلات القوائم المرتبة والمقطية في اتجاه اليمين لليسار (RTL) */
+html[dir="rtl"] .tab-content ul li::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .tab-content li {
+    padding-left: 0;
+    padding-right: 20px; /* مسافة للنقطة المخصصة */
+}
+
+html[dir="rtl"] .tab-content ol li {
+    padding-left: 0;
+    padding-right: 30px;
+}
+html[dir="rtl"] .tab-content ol li::before {
+    left: auto;
+    right: 0;
 }
