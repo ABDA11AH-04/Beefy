@@ -1,19 +1,46 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط أكثر حداثة */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5; /* لون خلفية خفيف جداً */
     color: #333;
-    direction: ltr; /* الافتراضي للغة الإنجليزية، سيتم تعديله في الـ HTML للعربية */
+    direction: ltr; 
 }
 
 .container {
     max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto; /* تقليل المسافة العلوية */
+    background-color: #ffffff;
+    padding: 0; /* تم إزالة الـ Padding الأساسي ليتناسب مع التصميم الجديد */
+    border-radius: 12px; /* زوايا أكثر استدارة */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* ظل أعمق وأكثر احترافية */
+    overflow: hidden; /* لضمان أن الزوايا المستديرة تطبق على كل شيء */
+}
+
+/* ------------------ Language Toggle Button ------------------ */
+
+.language-toggle {
+    position: absolute;
+    top: 20px; /* تحريكها قليلاً للأسفل */
+    right: 20px;
+    z-index: 10;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.8); /* خلفية شفافة قليلاً */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.language-toggle img {
+    width: 24px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+html[dir="rtl"] .language-toggle {
+    left: 20px;
+    right: auto;
 }
 
 /* ------------------ Header and Product Card (Index Pages) ------------------ */
@@ -21,181 +48,202 @@ body {
 .header {
     background-color: #007bff;
     color: white;
-    padding: 15px 20px;
+    padding: 20px;
     text-align: center;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    font-size: 1.5em;
-    font-weight: bold;
+    /* إزالة الـ border-radius هنا لأنه سيتم تطبيقه على الـ container */
+    margin-bottom: 0; 
+    font-size: 1.8em;
+    font-weight: 600; /* خط سميك قليلاً */
 }
 
 .product-card {
     text-align: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 30px 20px;
+    border: none; /* إزالة الحدود */
+    margin-bottom: 0;
 }
 
 .product-card img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* ظل أنظف */
 }
 
 .product-card h2 {
-    color: #007bff;
+    color: #28a745; /* لون العلامة التجارية */
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
 }
 
 .details-button {
     display: inline-block;
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
+    border-radius: 30px; /* زر دائري */
+    margin-top: 20px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
 }
 
 .details-button:hover {
-    background-color: #218838;
+    background-color: #0056b3;
+    transform: translateY(-2px); /* تأثير رفع بسيط */
 }
 
 /* ------------------ Details Page Styling ------------------ */
 
+/* --- Image Header --- */
+.product-image-header {
+    width: 100%;
+    height: 200px; /* ارتفاع ثابت */
+    background: url('https://i.ibb.co/L8m2FjQ/hotdog-header.jpg') center center no-repeat; /* صورة جديدة */
+    background-size: cover;
+    display: flex;
+    align-items: flex-end; /* وضع العنوان في الأسفل */
+    padding: 0;
+}
+
 .details-header {
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.4); /* خلفية شفافة للعنوان فوق الصورة */
     color: white;
     padding: 15px 20px;
     text-align: center;
-    border-radius: 8px 8px 0 0;
-    font-size: 1.5em;
-    font-weight: bold;
+    width: 100%;
+    font-size: 1.6em;
+    font-weight: 600;
+    border-radius: 0; /* لا زوايا مستديرة هنا */
 }
 
 /* --- Tabs Navigation --- */
 .tabs-nav {
     display: flex;
     justify-content: space-around;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 1px solid #ddd;
     background-color: #f9f9f9;
 }
 
 .tab-button {
     flex-grow: 1;
-    padding: 15px 0;
+    padding: 18px 0; /* زيادة الارتفاع */
     cursor: pointer;
     border: none;
     background: transparent;
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 1.05em;
+    font-weight: 600;
     color: #555;
-    transition: color 0.3s, border-bottom 0.3s;
+    transition: color 0.3s, border-bottom 0.3s, background-color 0.3s;
     outline: none;
 }
 
 .tab-button.active {
-    color: #007bff;
-    border-bottom: 3px solid #007bff;
+    color: #e44d26; /* لون مميز للـ Tabs */
+    border-bottom: 4px solid #e44d26;
     background-color: #fff;
 }
 
 .tab-button:hover:not(.active) {
-    color: #0056b3;
+    color: #e44d26;
+    background-color: #f0f0f0;
 }
 
 /* --- Tab Content --- */
 .tab-content {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 8px 8px;
-    min-height: 250px;
-    display: none; /* Hidden by default */
+    padding: 25px;
+    border: none;
+    min-height: 350px;
+    display: none; 
 }
 
 .tab-content.active {
-    display: block; /* Shown when active */
+    display: block; 
 }
 
 .tab-content h3 {
-    color: #007bff;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+    color: #e44d26; /* لون العنوان داخل المحتوى */
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
     margin-top: 0;
+    font-size: 1.3em;
 }
 
 .tab-content ul, .tab-content ol {
-    list-style-position: inside;
     padding: 0;
+    list-style-type: none; /* إزالة النقاط/الأرقام الافتراضية */
 }
 
 .tab-content li {
-    margin-bottom: 10px;
-    line-height: 1.5;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    padding-left: 20px; /* مسافة للنقطة المخصصة (لغات RTL و LTR) */
+    position: relative;
+    font-size: 0.95em;
 }
 
-/* Nutrition Table Styling */
+.tab-content ul li::before {
+    content: "\f058"; /* أيقونة علامة صح (Font Awesome) */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #28a745;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+html[dir="rtl"] .tab-content ul li::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .tab-content li {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+/* Nutrition Table Styling (تحسين الألوان والخطوط) */
 .nutrition-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    border: 1px solid #e0e0e0;
 }
 
 .nutrition-table th, .nutrition-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
     text-align: left;
 }
 
 .nutrition-table th {
-    background-color: #f0f8ff;
+    background-color: #f7f7f7;
     color: #333;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .nutrition-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #fafafa;
 }
 
 .nutrition-table td:last-child {
     font-weight: bold;
-    color: #28a745;
+    color: #007bff;
 }
 
 /* Video Container */
 .video-container {
-    margin-top: 20px;
-    /* Optional: Aspect ratio fix if needed */
+    margin-top: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Language Toggle Button */
-.language-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    text-decoration: none;
-    padding: 5px 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-}
-
-.language-toggle img {
-    width: 30px;
-    height: 20px;
-    vertical-align: middle;
-}
-/* Style for Arabic direction specific content */
+/* RTL adjustment for table text alignment */
 html[dir="rtl"] .nutrition-table th, html[dir="rtl"] .nutrition-table td {
     text-align: right;
-}
-html[dir="rtl"] .language-toggle {
-    left: 10px;
-    right: auto;
 }
