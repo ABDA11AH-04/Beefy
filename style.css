@@ -63,7 +63,7 @@ html[dir="rtl"] .language-toggle {
 }
 
 .product-card img {
-    max-width: 90%;
+    max-width: 70%; /* تم تقليل حجم الصورة هنا */
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -101,8 +101,9 @@ html[dir="rtl"] .language-toggle {
 /* --- Image Header --- */
 .product-image-header {
     width: 100%;
-    height: 200px;
-    background: url('https://i.ibb.co/L8m2FjQ/hotdog-header.jpg') center center no-repeat;
+    height: 200px; /* ارتفاع ثابت */
+    /* رابط جديد لصورة الخلفية (هوت دوج مجهز) */
+    background: url('https://i.ibb.co/CmLc38j/hotdog-details-header.jpg') center center no-repeat;
     background-size: cover;
     display: flex;
     align-items: flex-end;
@@ -216,7 +217,7 @@ html[dir="rtl"] .language-toggle {
 
 
 /* --- Nutrition Table Styling --- */
-.data-table { /* تغيير الاسم من nutrition-table لتشمل جدول المكونات أيضاً */
+.data-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
