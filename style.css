@@ -63,7 +63,7 @@ html[dir="rtl"] .language-toggle {
 }
 
 .product-card img {
-    max-width: 50%; /* تم تصغير حجم الصورة الرئيسية إلى 50% */
+    max-width: 50%; /* حجم الصورة الرئيسية في الـ Index */
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -102,7 +102,7 @@ html[dir="rtl"] .language-toggle {
 .product-image-header {
     width: 100%;
     height: 200px; 
-    /* تم تعيين رابط الصورة للخلفية محليًا */
+    /* تم إرجاع هذا الكود لاستخدام الصورة المحلية details_header.jpg */
     background: url('details_header.jpg') center center no-repeat;
     background-size: cover;
     display: flex;
