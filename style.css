@@ -101,16 +101,17 @@ html[dir="rtl"] .language-toggle {
 /* --- Image Header --- */
 .product-image-header {
     width: 100%;
-    height: 100px; /* تم تقليل الارتفاع لأنها أصبحت لوناً ثابتاً */
-    background: #8B0000; /* تم إلغاء الصورة واستبدالها بلون ثابت لضمان عدم ظهور "Image not found" */
+    height: 200px; /* إعادة الارتفاع لحجم الصورة */
+    /* رابط الصورة أصبح محليًا لضمان الظهور */
+    background: url('details_header.jpg') center center no-repeat;
+    background-size: cover;
     display: flex;
-    align-items: center; /* توسيط رأسي */
-    justify-content: center; /* توسيط أفقي */
+    align-items: flex-end;
     padding: 0;
 }
 
 .details-header {
-    background-color: transparent; /* جعل خلفية النص شفافة لتظهر الخلفية الداكنة */
+    background-color: rgba(0, 0, 0, 0.4); /* خلفية داكنة جزئية لتمييز النص */
     color: white;
     padding: 15px 20px;
     text-align: center;
