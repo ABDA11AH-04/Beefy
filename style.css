@@ -1,174 +1,103 @@
-/* -------------------------------------- */
-/* 1. التنسيقات العامة والخطوط */
-/* -------------------------------------- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
+    background-color: #f4f4f4;
     color: #333;
+    direction: ltr; /* الافتراضي للغة الإنجليزية، سيتم تعديله في الـ HTML للعربية */
 }
 
 .container {
-    width: 100%;
-    max-width: 450px; 
-    margin: 0 auto;
-    background-color: #ffffff;
-    min-height: 100vh;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    padding-bottom: 20px;
-    position: relative; /* هام لزر اللغة */
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* -------------------------------------- */
-/* 2. رأس الصفحة (Header) */
-/* -------------------------------------- */
-.app-header {
-    background-color: #007bff; 
+/* ------------------ Header and Product Card (Index Pages) ------------------ */
+
+.header {
+    background-color: #007bff;
     color: white;
-    padding: 20px 15px;
+    padding: 15px 20px;
     text-align: center;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.app-header h1 {
-    font-size: 1.5rem;
+.product-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h2 {
+    color: #007bff;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
-.product-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ffffff;
-    margin-top: 10px;
-}
-
-/* -------------------------------------- */
-/* 3. تنسيقات زر تغيير اللغة */
-/* -------------------------------------- */
-
-.language-toggle {
-    position: absolute;
-    top: 15px;
-    z-index: 1000;
-    display: block;
-    padding: 5px;
-}
-
-/* التنسيق للغة العربية (RTL) */
-html[dir="rtl"] .language-toggle {
-    left: 15px; 
-}
-
-/* التنسيق للغة الإنجليزية (LTR) */
-html[dir="ltr"] .language-toggle {
-    right: 15px;
-}
-
-.language-toggle img {
-    width: 30px; 
-    height: 20px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* -------------------------------------- */
-/* 4. تنسيقات صفحة INDEX.HTML */
-/* -------------------------------------- */
-.status-section {
-    padding: 20px 15px;
-    text-align: center;
-}
-
-.status-section h2 {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-.status-indicator {
-    display: inline-block;
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.status-indicator.safe {
-    background-color: #28a745; /* أخضر للأمان */
-    color: white;
-}
-
-.status-indicator i {
-    margin-left: 10px;
-}
-
-.expiry-date {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 15px;
-}
-
-/* زر الإجراء */
-.action-section {
-    padding: 20px 15px;
-    text-align: center;
-}
-
 .details-button {
-    background-color: #ffc107; 
-    color: #333;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 50px;
-    font-size: 1.1rem;
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
     font-weight: bold;
-    cursor: pointer;
-    width: 90%;
     transition: background-color 0.3s ease;
 }
 
 .details-button:hover {
-    background-color: #e0a800;
+    background-color: #218838;
 }
 
-/* -------------------------------------- */
-/* 5. تنسيقات صفحة DETAILS.HTML */
-/* -------------------------------------- */
+/* ------------------ Details Page Styling ------------------ */
+
 .details-header {
     background-color: #007bff;
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
     text-align: center;
-    font-size: 1.3rem;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
+/* --- Tabs Navigation --- */
 .tabs-nav {
     display: flex;
     justify-content: space-around;
-    background-color: #e9ecef;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 2px solid #ccc;
+    background-color: #f9f9f9;
 }
 
 .tab-button {
     flex-grow: 1;
-    padding: 15px 10px;
-    text-align: center;
-    border: none;
-    background-color: transparent;
+    padding: 15px 0;
     cursor: pointer;
-    font-size: 1rem;
+    border: none;
+    background: transparent;
+    font-size: 1em;
     font-weight: bold;
-    color: #495057;
-    transition: color 0.3s, background-color 0.3s;
+    color: #555;
+    transition: color 0.3s, border-bottom 0.3s;
+    outline: none;
 }
 
 .tab-button.active {
@@ -177,16 +106,42 @@ html[dir="ltr"] .language-toggle {
     background-color: #fff;
 }
 
+.tab-button:hover:not(.active) {
+    color: #0056b3;
+}
+
+/* --- Tab Content --- */
 .tab-content {
-    padding: 20px 15px;
-    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    min-height: 250px;
+    display: none; /* Hidden by default */
 }
 
 .tab-content.active {
-    display: block;
+    display: block; /* Shown when active */
 }
 
-/* تنسيق خاص بجدول التغذية */
+.tab-content h3 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.tab-content ul, .tab-content ol {
+    list-style-position: inside;
+    padding: 0;
+}
+
+.tab-content li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Nutrition Table Styling */
 .nutrition-table {
     width: 100%;
     border-collapse: collapse;
@@ -194,26 +149,53 @@ html[dir="ltr"] .language-toggle {
 }
 
 .nutrition-table th, .nutrition-table td {
-    border: 1px solid #dee2e6;
     padding: 10px;
-    text-align: right;
-}
-
-html[dir="ltr"] .nutrition-table th, 
-html[dir="ltr"] .nutrition-table td {
+    border: 1px solid #ddd;
     text-align: left;
 }
 
-
 .nutrition-table th {
-    background-color: #f8f9fa;
+    background-color: #f0f8ff;
+    color: #333;
+    font-weight: bold;
 }
 
-/* تنسيق قسم الفيديو المضمّن */
-.video-container iframe {
-    /* تجعل عرض الإطار 100% من الحاوية */
-    width: 100%; 
-    /* ارتفاع ثابت مناسب لشاشة الهاتف */
-    height: 200px; 
-    border-radius: 8px; /* إضافة حواف دائرية */
+.nutrition-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.nutrition-table td:last-child {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Video Container */
+.video-container {
+    margin-top: 20px;
+    /* Optional: Aspect ratio fix if needed */
+}
+
+/* Language Toggle Button */
+.language-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.language-toggle img {
+    width: 30px;
+    height: 20px;
+    vertical-align: middle;
+}
+/* Style for Arabic direction specific content */
+html[dir="rtl"] .nutrition-table th, html[dir="rtl"] .nutrition-table td {
+    text-align: right;
+}
+html[dir="rtl"] .language-toggle {
+    left: 10px;
+    right: auto;
 }
