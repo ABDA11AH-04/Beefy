@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sausages Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <a href="details.html" class="language-toggle">
+            <img src="https://flagcdn.com/w20/eg.png" alt="العربية">
+        </a>
+        
+        <div class="details-header">
+            Beef Sausages Details
+        </div>
+
+        <div class="tabs-nav">
+            <button class="tab-button active" data-tab="ingredients">Ingredients</button>
+            <button class="tab-button" data-tab="nutrition">Nutrition</button>
+            <button class="tab-button" data-tab="recipe">Recipe</button>
+        </div>
+
+        <div id="ingredients" class="tab-content active">
+            <h3>Key Ingredients</h3>
+            <ul>
+                <li>**High-Quality Ground Beef** (Fat content not exceeding 20%).</li>
+                <li>Natural/Artificial thin edible casing.</li>
+                <li>Sausage Spices (Garlic, Paprika, Fennel, Red Pepper).</li>
+                <li>Iced water and salt (to aid binding and preservation).</li>
+            </ul>
+            <p class="expiry-date" style="color: #d9534f; margin-top: 20px;">
+                **Allergy Alert:** This product is gluten-free but contains a small amount of added sugar (Dextrose).
+            </p>
+        </div>
+
+        <div id="nutrition" class="tab-content">
+            <h3>Nutrition Facts (Per 100 grams)</h3>
+            <table class="nutrition-table">
+                <thead>
+                    <tr>
+                        <th>Content</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Calories</td>
+                        <td>**280 kcal**</td>
+                    </tr>
+                    <tr>
+                        <td>Protein</td>
+                        <td>**20 g**</td>
+                    </tr>
+                    <tr>
+                        <td>Total Fat</td>
+                        <td>22 g</td>
+                    </tr>
+                    <tr>
+                        <td>Carbohydrates</td>
+                        <td>3 g</td>
+                    </tr>
+                    <tr>
+                        <td>Sodium</td>
+                        <td>650 mg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="recipe" class="tab-content">
+            
+            <h3>Cooking and Preparation Instructions</h3>
+            <ol>
+                <li>**Thawing:** Sausages must be fully thawed in the refrigerator before cooking.</li>
+                <li>**Grilling:** Cook over medium heat for **10-12 minutes**, turning constantly until lightly browned.</li>
+                <li>**Pan-Frying:** Fry in a small amount of hot oil (not deep-fried) for **8-10 minutes**.</li>
+                <li>**Verification:** Use a thermometer to ensure the internal temperature reaches **74°C** for safety.</li>
+            </ol>
+            
+            <h3 style="margin-top: 25px;">Watch the Preparation Method</h3>
+            
+            <div class="video-container">
+                <iframe width="100%" height="250" 
+                    src="https://www.youtube.com/embed/Q51Xp1yv0_4?si=dHuuRpNR7gNJXZVS" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

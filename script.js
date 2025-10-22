@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // هذا الكود يعمل فقط في صفحة details.html
+    // هذا الكود يعمل في كل من صفحة details.html و details_en.html
 
     const tabs = document.querySelectorAll('.tab-button');
     const contents = document.querySelectorAll('.tab-content');
