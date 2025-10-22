@@ -1,32 +1,32 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط أكثر حداثة */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* لون خلفية خفيف جداً */
+    background-color: #f0f2f5;
     color: #333;
     direction: ltr; 
 }
 
 .container {
     max-width: 600px;
-    margin: 30px auto; /* تقليل المسافة العلوية */
+    margin: 30px auto;
     background-color: #ffffff;
-    padding: 0; /* تم إزالة الـ Padding الأساسي ليتناسب مع التصميم الجديد */
-    border-radius: 12px; /* زوايا أكثر استدارة */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* ظل أعمق وأكثر احترافية */
-    overflow: hidden; /* لضمان أن الزوايا المستديرة تطبق على كل شيء */
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 /* ------------------ Language Toggle Button ------------------ */
 
 .language-toggle {
     position: absolute;
-    top: 20px; /* تحريكها قليلاً للأسفل */
+    top: 20px;
     right: 20px;
     z-index: 10;
     text-decoration: none;
     padding: 8px 12px;
-    background-color: rgba(255, 255, 255, 0.8); /* خلفية شفافة قليلاً */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
@@ -46,19 +46,19 @@ html[dir="rtl"] .language-toggle {
 /* ------------------ Header and Product Card (Index Pages) ------------------ */
 
 .header {
-    background-color: #007bff;
+    background-color: #8B0000; /* لون أحمر داكن من الـ QR */
     color: white;
     padding: 20px;
     text-align: center;
     margin-bottom: 0; 
     font-size: 1.8em;
-    font-weight: 600; /* خط سميك قليلاً */
+    font-weight: 600;
 }
 
 .product-card {
     text-align: center;
     padding: 30px 20px;
-    border: none; /* إزالة الحدود */
+    border: none;
     margin-bottom: 0;
 }
 
@@ -67,11 +67,11 @@ html[dir="rtl"] .language-toggle {
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* ظل أنظف */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .product-card h2 {
-    color: #28a745; /* لون العلامة التجارية */
+    color: #8B0000; /* لون أحمر داكن من الـ QR */
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 1.6em;
@@ -79,21 +79,21 @@ html[dir="rtl"] .language-toggle {
 
 .details-button {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #A02C2C; /* لون أحمر أغمق قليلاً من الـ QR */
     color: white;
     padding: 12px 25px;
     text-decoration: none;
-    border-radius: 30px; /* زر دائري */
+    border-radius: 30px;
     margin-top: 20px;
     font-weight: bold;
     font-size: 1.1em;
     transition: background-color 0.3s ease, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(160, 44, 44, 0.3);
 }
 
 .details-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px); /* تأثير رفع بسيط */
+    background-color: #8B0000; /* لون أحمر داكن من الـ QR */
+    transform: translateY(-2px);
 }
 
 /* ------------------ Details Page Styling ------------------ */
@@ -101,16 +101,16 @@ html[dir="rtl"] .language-toggle {
 /* --- Image Header --- */
 .product-image-header {
     width: 100%;
-    height: 200px; /* ارتفاع ثابت */
-    background: url('https://i.ibb.co/L8m2FjQ/hotdog-header.jpg') center center no-repeat; /* صورة الهوت دوج الافتراضية */
+    height: 200px;
+    background: url('https://i.ibb.co/L8m2FjQ/hotdog-header.jpg') center center no-repeat;
     background-size: cover;
     display: flex;
-    align-items: flex-end; /* وضع العنوان في الأسفل */
+    align-items: flex-end;
     padding: 0;
 }
 
 .details-header {
-    background-color: rgba(0, 0, 0, 0.4); /* خلفية شفافة للعنوان فوق الصورة */
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 15px 20px;
     text-align: center;
@@ -130,7 +130,7 @@ html[dir="rtl"] .language-toggle {
 
 .tab-button {
     flex-grow: 1;
-    padding: 18px 0; /* زيادة الارتفاع */
+    padding: 18px 0;
     cursor: pointer;
     border: none;
     background: transparent;
@@ -142,13 +142,13 @@ html[dir="rtl"] .language-toggle {
 }
 
 .tab-button.active {
-    color: #e44d26; /* لون مميز للـ Tabs (برتقالي/أحمر) */
-    border-bottom: 4px solid #e44d26;
+    color: #A02C2C; /* لون أحمر أغمق قليلاً من الـ QR */
+    border-bottom: 4px solid #A02C2C;
     background-color: #fff;
 }
 
 .tab-button:hover:not(.active) {
-    color: #e44d26;
+    color: #A02C2C;
     background-color: #f0f0f0;
 }
 
@@ -165,7 +165,7 @@ html[dir="rtl"] .language-toggle {
 }
 
 .tab-content h3 {
-    color: #e44d26; /* لون العنوان داخل المحتوى */
+    color: #8B0000; /* لون أحمر داكن من الـ QR */
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 8px;
     margin-top: 0;
@@ -176,7 +176,7 @@ html[dir="rtl"] .language-toggle {
 
 .tab-content ul, .tab-content ol {
     padding: 0;
-    list-style-type: none; /* إزالة النقاط/الأرقام الافتراضية */
+    list-style-type: none;
 }
 
 .tab-content li {
@@ -193,7 +193,7 @@ html[dir="rtl"] .language-toggle {
     content: "\f058"; /* أيقونة علامة صح (Font Awesome) */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    color: #28a745;
+    color: #28a745; /* لون أخضر للتحقق */
     position: absolute;
     left: 0;
     top: 0;
@@ -201,47 +201,47 @@ html[dir="rtl"] .language-toggle {
 
 /* أرقام / أيقونات القوائم المرتبة (طريقة الطبخ) */
 .tab-content ol li {
-    counter-increment: step-counter; /* لإضافة الأرقام بترتيب */
+    counter-increment: step-counter;
     padding-left: 30px;
 }
 
 .tab-content ol li::before {
     content: counter(step-counter) ".";
     font-weight: bold;
-    color: #007bff; /* لون الأزرق للأرقام */
+    color: #A02C2C; /* لون أحمر أغمق قليلاً من الـ QR للأرقام */
     position: absolute;
     left: 0;
     top: 0;
 }
 
 
-/* --- Nutrition Table Styling (تحسين الألوان والخطوط) --- */
-.nutrition-table {
+/* --- Nutrition Table Styling --- */
+.data-table { /* تغيير الاسم من nutrition-table لتشمل جدول المكونات أيضاً */
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
     border: 1px solid #e0e0e0;
 }
 
-.nutrition-table th, .nutrition-table td {
+.data-table th, .data-table td {
     padding: 12px;
     border: 1px solid #e0e0e0;
     text-align: left;
 }
 
-.nutrition-table th {
+.data-table th {
     background-color: #f7f7f7;
     color: #333;
     font-weight: 700;
 }
 
-.nutrition-table tr:nth-child(even) {
+.data-table tr:nth-child(even) {
     background-color: #fafafa;
 }
 
-.nutrition-table td:last-child {
+.data-table td:last-child {
     font-weight: bold;
-    color: #007bff;
+    color: #A02C2C; /* لون أحمر أغمق قليلاً من الـ QR */
 }
 
 /* --- Video Container --- */
@@ -252,9 +252,22 @@ html[dir="rtl"] .language-toggle {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Allergy Alert --- */
+.allergy-alert {
+    color: #D32F2F !important; /* لون أحمر قوي للتنبيه */
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #FFEBEE; /* خلفية خفيفة */
+    border-radius: 5px;
+    border: 1px solid #EF9A9A;
+}
+
+
 /* ------------------ RTL Adjustments (التعديلات الخاصة باللغة العربية) ------------------ */
 
-html[dir="rtl"] .nutrition-table th, html[dir="rtl"] .nutrition-table td {
+html[dir="rtl"] .data-table th, html[dir="rtl"] .data-table td {
     text-align: right;
 }
 
@@ -263,7 +276,6 @@ html[dir="rtl"] .language-toggle {
     right: auto;
 }
 
-/* تعديلات القوائم المرتبة والمقطية في اتجاه اليمين لليسار (RTL) */
 html[dir="rtl"] .tab-content ul li::before {
     left: auto;
     right: 0;
@@ -271,7 +283,7 @@ html[dir="rtl"] .tab-content ul li::before {
 
 html[dir="rtl"] .tab-content li {
     padding-left: 0;
-    padding-right: 20px; /* مسافة للنقطة المخصصة */
+    padding-right: 20px;
 }
 
 html[dir="rtl"] .tab-content ol li {
