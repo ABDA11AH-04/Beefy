@@ -25,7 +25,7 @@ body {
 /* --- Index Page Styling (Red Theme) --- */
 
 .header {
-    background-color: #A02C2C; /* اللون الأحمر الموحد */
+    background-color: #A02C2C; /* اللون الأحمر الموحد للصفحة الرئيسية */
     color: #fff;
     padding: 15px 20px;
     font-size: 1.4em;
@@ -75,31 +75,14 @@ body {
     font-size: 1.1em;
     transition: background-color 0.3s, transform 0.1s;
     box-shadow: 0 4px 6px rgba(160, 44, 44, 0.4);
+    margin-bottom: 30px; /* زيادة الهامش السفلي بعد إزالة الـ QR */
 }
 
 .details-button:hover {
     background-color: #8c2525;
 }
 
-/* QR Code Section (Index Page) */
-.qr-code-section {
-    margin-top: 30px;
-    padding: 20px 0;
-    border-top: 1px solid #eee;
-    text-align: center;
-}
-
-.qr-code-section h3 {
-    color: #333;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-.qr-code-image {
-    width: 150px;
-    height: 150px;
-    max-width: 100%;
-}
+/* (QR Code Section styles removed as requested) */
 
 
 /* --- Details Page Specific Styling --- */
