@@ -1,297 +1,213 @@
+/* General Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
-    color: #333;
-    direction: ltr; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
 .container {
+    width: 100%;
     max-width: 600px;
-    margin: 30px auto;
-    background-color: #ffffff;
-    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding-bottom: 20px;
+    position: relative;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-/* ------------------ Language Toggle Button ------------------ */
-
+/* Language Toggle */
 .language-toggle {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     z-index: 10;
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 5px;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
 
+.language-toggle:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
 .language-toggle img {
-    width: 24px;
-    height: 16px;
-    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    display: block;
 }
 
-html[dir="rtl"] .language-toggle {
-    left: 20px;
-    right: auto;
-}
-
-/* ------------------ Header and Product Card (Index Pages) ------------------ */
-
-.header {
-    background-color: #8B0000; /* لون أحمر داكن من الـ QR */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 0; 
-    font-size: 1.8em;
-    font-weight: 600;
-}
-
-.product-card {
-    text-align: center;
-    padding: 30px 20px;
-    border: none;
-    margin-bottom: 0;
-}
-
-.product-card img {
-    max-width: 50%; /* تم تصغير حجم الصورة الرئيسية إلى 50% */
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.product-card h2 {
-    color: #8B0000; /* لون أحمر داكن من الـ QR */
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.6em;
-}
-
-.details-button {
-    display: inline-block;
-    background-color: #A02C2C; /* لون أحمر أغمق قليلاً من الـ QR */
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 30px;
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease, transform: 0.2s;
-    box-shadow: 0 4px 8px rgba(160, 44, 44, 0.3);
-}
-
-.details-button:hover {
-    background-color: #8B0000; /* لون أحمر داكن من الـ QR */
-    transform: translateY(-2px);
-}
-
-/* ------------------ Details Page Styling ------------------ */
-
-/* --- Image Header --- */
+/* Header & Image */
 .product-image-header {
     width: 100%;
-    height: 200px; 
-    /* تم تعيين رابط الصورة للخلفية محليًا */
-    background: url('details_header.jpg') center center no-repeat;
+    height: 200px;
+    background-image: url('details_header.jpg'); 
     background-size: cover;
+    background-position: center;
+    position: relative;
     display: flex;
     align-items: flex-end;
-    padding: 0;
+    justify-content: center;
 }
 
 .details-header {
-    background-color: rgba(0, 0, 0, 0.4); 
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
     width: 100%;
-    font-size: 1.6em;
-    font-weight: 600;
-    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
 }
 
-/* --- Tabs Navigation --- */
+/* Tabs Navigation */
 .tabs-nav {
+    /* تم التعديل لدعم 4 تبويبات */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
     border-bottom: 1px solid #ddd;
     background-color: #f9f9f9;
 }
 
 .tab-button {
-    flex-grow: 1;
-    padding: 18px 0;
+    /* تم التعديل لدعم 4 تبويبات */
+    flex-shrink: 0; 
+    padding: 18px 10px; 
     cursor: pointer;
     border: none;
     background: transparent;
-    font-size: 1.05em;
+    font-size: 0.95em; 
     font-weight: 600;
     color: #555;
     transition: color 0.3s, border-bottom 0.3s, background-color 0.3s;
     outline: none;
+    text-align: center;
 }
 
 .tab-button.active {
-    color: #A02C2C; /* لون أحمر أغمق قليلاً من الـ QR */
+    color: #A02C2C;
     border-bottom: 4px solid #A02C2C;
     background-color: #fff;
 }
 
-.tab-button:hover:not(.active) {
-    color: #A02C2C;
-    background-color: #f0f0f0;
-}
-
-/* --- Tab Content --- */
+/* Tab Content */
 .tab-content {
-    padding: 25px;
-    border: none;
-    min-height: 350px;
-    display: none; 
+    padding: 20px;
+    display: none;
+    animation: fadeIn 0.5s;
 }
 
 .tab-content.active {
-    display: block; 
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .tab-content h3 {
-    color: #8B0000; /* لون أحمر داكن من الـ QR */
-    border-bottom: 2px solid #f0f0f0;
+    color: #A02C2C;
+    border-bottom: 2px solid #eee;
     padding-bottom: 8px;
     margin-top: 0;
-    font-size: 1.3em;
+    margin-bottom: 15px;
+    font-size: 1.2em;
 }
 
-/* --- قوائم المكونات وطريقة الطبخ (مع تحسين الأرقام والنقاط) --- */
-
-.tab-content ul, .tab-content ol {
-    padding: 0;
-    list-style-type: none;
-}
-
-.tab-content li {
-    margin-bottom: 12px;
+.tab-content p, .tab-content li {
     line-height: 1.6;
-    padding-left: 20px; 
-    position: relative;
-    font-size: 0.95em;
-    color: #444; 
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1em;
 }
 
-/* نقاط / أيقونات القوائم النقطية (إذا تم استخدامها) */
-.tab-content ul li::before {
-    content: "\f058"; /* أيقونة علامة صح (Font Awesome) */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: #28a745; /* لون أخضر للتحقق */
-    position: absolute;
-    left: 0;
-    top: 0;
+.tab-content ol, .tab-content ul {
+    margin: 15px 0;
+    padding-left: 20px;
 }
 
-/* أرقام / أيقونات القوائم المرتبة (طريقة الطبخ) */
-.tab-content ol li {
-    counter-increment: step-counter;
-    padding-left: 30px;
-}
-
-.tab-content ol li::before {
-    content: counter(step-counter) ".";
-    font-weight: bold;
-    color: #A02C2C; /* لون أحمر أغمق قليلاً من الـ QR للأرقام */
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-
-/* --- Nutrition Table Styling --- */
+/* Data Table Styling (for Ingredients and Nutrition) */
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .data-table th, .data-table td {
-    padding: 12px;
-    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 .data-table th {
-    background-color: #f7f7f7;
-    color: #333;
-    font-weight: 700;
+    background-color: #A02C2C;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
 }
 
 .data-table tr:nth-child(even) {
-    background-color: #fafafa;
+    background-color: #f9f9f9;
 }
 
-.data-table td:last-child {
-    font-weight: bold;
-    color: #A02C2C; /* لون أحمر أغمق قليلاً من الـ QR */
+.data-table tr:hover {
+    background-color: #f1f1f1;
 }
 
-/* --- Video Container --- */
+/* Video Container */
 .video-container {
-    margin-top: 25px;
+    margin-top: 15px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Allergy Alert --- */
-.allergy-alert {
-    color: #D32F2F !important; /* لون أحمر قوي للتنبيه */
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-    padding: 10px;
-    background-color: #FFEBEE; /* خلفية خفيفة */
-    border-radius: 5px;
-    border: 1px solid #EF9A9A;
-}
-
-
-/* ------------------ RTL Adjustments (التعديلات الخاصة باللغة العربية) ------------------ */
-
-html[dir="rtl"] .data-table th, html[dir="rtl"] .data-table td {
+/* RTL (Arabic) adjustments */
+[dir="rtl"] .data-table th, [dir="rtl"] .data-table td {
     text-align: right;
 }
 
-html[dir="rtl"] .language-toggle {
-    left: 20px;
-    right: auto;
-}
-
-html[dir="rtl"] .tab-content ul li::before {
-    left: auto;
-    right: 0;
-}
-
-html[dir="rtl"] .tab-content li {
-    padding-left: 0;
+[dir="rtl"] .tab-content ol, [dir="rtl"] .tab-content ul {
     padding-right: 20px;
+    padding-left: 0;
 }
 
-html[dir="rtl"] .tab-content ol li {
-    padding-left: 0;
-    padding-right: 30px;
+[dir="rtl"] .tab-button {
+    /* تأكيد النص من اليمين لليسار */
+    direction: rtl;
 }
-html[dir="rtl"] .tab-content ol li::before {
-    left: auto;
-    right: 0;
+
+/* Ensure data-table headers look correct in RTL */
+[dir="rtl"] .data-table th {
+    direction: rtl;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 480px) {
+    .details-header {
+        font-size: 1.2em;
+        padding: 10px 15px;
+    }
+
+    .tab-button {
+        font-size: 0.85em; 
+        padding: 15px 8px;
+    }
+
+    .tab-content {
+        padding: 15px;
+    }
 }
