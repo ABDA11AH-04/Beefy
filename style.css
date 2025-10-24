@@ -39,10 +39,10 @@ body {
 }
 
 .product-card img {
-    /* تم تصغير حجم الصورة إلى 55% كما طلبت */
-    width: 55%; 
+    /* تم تصغير حجم الصورة إلى 40% كما طلبت */
+    width: 40%; 
     max-width: 400px; 
-    height: auto;
+    height: auto; /* الحفاظ على التناسب */
     border-radius: 8px;
     margin-bottom: 20px;
 }
