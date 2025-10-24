@@ -22,7 +22,7 @@ body {
     overflow: hidden;
 }
 
-/* --- Index Page Styling (Red Theme) --- */
+/* --- Index Page Styling (Red Theme - using product-card) --- */
 
 .header {
     background-color: #A02C2C; /* اللون الأحمر الموحد للصفحة الرئيسية */
@@ -33,33 +33,29 @@ body {
     text-align: center;
 }
 
-.product-image {
-    padding: 20px 0;
+.product-card {
+    padding: 20px;
     text-align: center;
 }
 
-.product-image img {
-    width: 90%;
+.product-card img {
+    width: 100%;
     max-width: 400px; 
     height: auto;
     border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-.content {
-    padding: 0 20px;
-    text-align: center;
-}
-
-.content h1 {
+.product-card h2 {
     color: #A02C2C; /* اللون الأحمر الموحد */
     font-size: 1.8em;
     margin: 10px 0;
 }
 
-.content p {
+.product-card p {
     color: #555;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* Details Button (Index Page) */
@@ -68,21 +64,19 @@ body {
     background-color: #A02C2C; /* اللون الأحمر الموحد للزر */
     color: #fff;
     padding: 12px 30px;
-    margin: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1em;
     transition: background-color 0.3s, transform 0.1s;
     box-shadow: 0 4px 6px rgba(160, 44, 44, 0.4);
-    margin-bottom: 30px; /* زيادة الهامش السفلي بعد إزالة الـ QR */
 }
 
 .details-button:hover {
     background-color: #8c2525;
 }
-
-/* (QR Code Section styles removed as requested) */
 
 
 /* --- Details Page Specific Styling --- */
@@ -248,7 +242,7 @@ body {
     padding-left: 0;
 }
 
-[dir="rtl"] .content {
+[dir="rtl"] .product-card h2, [dir="rtl"] .product-card p {
     text-align: right;
 }
 
