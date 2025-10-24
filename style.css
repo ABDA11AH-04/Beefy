@@ -39,7 +39,8 @@ body {
 }
 
 .product-card img {
-    width: 100%;
+    /* تم تصغير حجم الصورة إلى 80% */
+    width: 80%; 
     max-width: 400px; 
     height: auto;
     border-radius: 8px;
